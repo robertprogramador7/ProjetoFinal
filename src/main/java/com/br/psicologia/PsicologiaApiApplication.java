@@ -1,0 +1,11 @@
+package com.br.psicologia;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PsicologiaApiApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(PsicologiaApiApplication.class, args);
+    }
+}
