@@ -1,10 +1,9 @@
 package com.br.service;
 
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import com.br.entity.Paciente;
+import com.br.exception.custom.RecursoNaoEncontrado;
 import com.br.repository.PacienteRepository;
 
 @Service
@@ -22,7 +21,7 @@ public class PacienteService {
 
     public Paciente buscar(Long id) {
         return repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Paciente não encontrado"));
+                .orElseThrow(() -> new RecursoNaoEncontrado("Paciente não encontrado"));
     }
 
     public Paciente salvar(Paciente p) {
@@ -38,6 +37,7 @@ public class PacienteService {
     }
 
     public void deletar(Long id) {
+        buscar(id); 
         repo.deleteById(id);
     }
 }

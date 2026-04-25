@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.br.entity.Consulta;
+import com.br.exception.custom.RecursoNaoEncontrado;
 import com.br.repository.ConsultaRepository;
 
 @Service
@@ -22,7 +23,7 @@ public class ConsultaService {
 
     public Consulta buscar(Long id) {
         return repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Consulta não encontrada"));
+                .orElseThrow(() -> new RecursoNaoEncontrado("Consulta não encontrada"));
     }
 
     public Consulta salvar(Consulta c) {
@@ -30,6 +31,7 @@ public class ConsultaService {
     }
 
     public void deletar(Long id) {
+        buscar(id); 
         repo.deleteById(id);
     }
 }

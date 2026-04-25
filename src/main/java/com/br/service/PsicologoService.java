@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.br.entity.Psicologo;
+import com.br.exception.custom.RecursoNaoEncontrado;
 import com.br.repository.PsicologoRepository;
 
 @Service
@@ -22,7 +23,7 @@ public class PsicologoService {
 
     public Psicologo buscar(Long id) {
         return repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Psicólogo não encontrado"));
+                .orElseThrow(() -> new RecursoNaoEncontrado("Psicólogo não encontrado"));
     }
 
     public Psicologo salvar(Psicologo p) {
@@ -38,6 +39,7 @@ public class PsicologoService {
     }
 
     public void deletar(Long id) {
-        repo.deleteById(id);
-    }
+    buscar(id); 
+    repo.deleteById(id);
+}
 }
