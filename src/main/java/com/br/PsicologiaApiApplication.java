@@ -1,4 +1,4 @@
-package com.br.psicologia;
+package com.br;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
