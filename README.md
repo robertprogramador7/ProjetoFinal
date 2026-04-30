@@ -14,6 +14,24 @@ O sistema simula um ambiente real de clínica psicológica, facilitando o contro
 
 ---
 
+## Diagrama do Sistema
+
+
+<img width="1285" height="469" alt="Captura de tela 2026-04-29 211531" src="https://github.com/user-attachments/assets/15436e3f-79b2-4882-8d22-a9e89803d7e9" />
+
+
+
+
+
+
+## Banco de Dados
+
+<img width="928" height="268" alt="Captura de tela 2026-04-29 212941" src="https://github.com/user-attachments/assets/45f2065b-be7f-48a6-a67a-2efa2af24e0c" />
+
+
+
+
+
 ## 🛠️ Tecnologias utilizadas
 
 * ☕ Java
